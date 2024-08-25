@@ -1,0 +1,14 @@
+{
+  "string_footer-describe": {
+    "en": "This tool captures a photo from your phone's camera or from an upload and sends it to <a target=\"_blank\" href=\"https://openai.com\">OpenAI</a>'s <code>gpt-4o-mini</code> model for interpretation. I don't store the image, but OpenAI might. See the code and give feedback on <a href=\"https://github.com/iandees/image-to-osm\">GitHub</a>.",
+    "zh-Hans": "此工具可以从您的手机相机或上传的图片中捕获照片，并将其发送到<a target=\"_blank\" href=\"https://openai.com\">OpenAI</a>的<code>gpt-4o-mini</code>模型进行解读。我不存储图像，但OpenAI可能会。您可以在<a href=\"https://github.com/iandees/image-to-osm\">GitHub</a>上查看代码并给予反馈。"
+  },
+  "string_capture": {
+    "en": "Capture",
+    "zh-Hans": "识图"
+  },
+  "string_header-title": {
+    "en": "Extract OpenStreetMap tags from an Image",
+    "zh-Hans": "从图片中提取OpenStreetMap标签"
+  }
+}

@@ -44,16 +44,16 @@
 </head>
 <body>
 <div class="container text-center">
-    <h1 class="mb-4">Extract OpenStreetMap tags from an Image</h1>
+    <h1 class="mb-4">{{string_header-title}}</h1>
     <div class="row justify-content-center">
         <div class="col-12 col-md-8">
             <label id="capture" class="btn btn-primary btn-block">
-                <span class="camera-icon">&#128247; Capture</span> <!-- Camera emoji -->
+                <span class="camera-icon">&#128247; {{string_capture}}</span> <!-- Camera emoji -->
                 <input type="file" accept="image/*" capture="environment">
             </label>
             <img id="photo" class="img-fluid" alt="Captured Image" style="display:none;">
             <div id="result" class="mt-4"></div>
-            <span class="mt-2">This tool captures a photo from your phone's camera or from an upload and sends it to <a target="_blank" href="https://openai.com">OpenAI</a>'s <code>gpt-4o-mini</code> model for interpretation. I don't store the image, but OpenAI might. See the code and give feedback <a href="https://github.com/iandees/image-to-osm">on GitHub</a>.</span>
+            <span class="mt-2">{{string_footer-describe}}</span>
         </div>
     </div>
 </div>

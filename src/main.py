@@ -19,6 +19,14 @@ client = OpenAI()
 # Endpoint to show the HTML page
 @app.route('/')
 def index():
+    # target_lang="en"
+    # with open("index.html","r",encoding="utf-8") as f:
+    #     template_raw=f.read()
+    # with open("i18n.json","r",encoding="utf-8") as f:
+    #     template_i18n=json.loads(f.read())
+    # template_text=template_raw
+    # for key in template_i18n:
+    #     template_text=template_text.replace("{{"+key+"}}",template_i18n[key].get(target_lang,"missing_translation"))
     return render_template('index.html')
 
 # Endpoint to receive the image
