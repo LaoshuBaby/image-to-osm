@@ -51,6 +51,11 @@ def upload_image():
     # Convert image data to base64 text
     b64image_data = base64.b64encode(buffer.read()).decode('utf-8')
 
+    try:
+        with open("prompt.txt","r",encoding="UTF-8") as f:
+            prompt_text=f.read()
+    except Exception as e:
+        print(e)
     # Send the image to OpenAI API (using an appropriate image-to-text endpoint)
     try:
         response = client.chat.completions.create(
@@ -61,7 +66,7 @@ def upload_image():
                     content=[
                         ChatCompletionContentPartTextParam(
                             type="text",
-                            text="Extract OpenStreetMap tags for the primary subject or storefront in the given image. If there are opening hours, return them in OpenStreetMap 'opening_hours' format. If there is a URL, visit that page and use it to help decide on tags. Only output JSON. Do not make up OpenStreetMap tags. If you find something that should have OpenStreetMap tags, set status to 'ok'. If nothing has OpenStreetMap tags, set status to 'not_found'. Output a JSON object with keys 'status' and 'tags'. 'tags' should be a simple object with tag key and tag value.",
+                            text=prompt_text,
                         ),
                         ChatCompletionContentPartImageParam(
                             type="image_url",
